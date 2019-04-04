@@ -1,0 +1,34 @@
+os: linux
+sudo: false
+
+language: node_js
+node_js:
+  - "8"
+
+cache:
+  directories:
+    - "node_modules"
+
+branches:
+  only:
+  - master
+
+install:
+  - yarn install
+  - yarn run generate
+
+script:
+  - echo "Skipping tests"
+
+deploy:
+  provider: pages
+  committer-from-gh: true
+  skip-cleanup: true
+  github-token: $GITHUB_ACCESS_TOKEN
+  target-branch: gh-pages
+  local-dir: dist
+  on:
+    branch: master
+
+notifications:
+  email: false
