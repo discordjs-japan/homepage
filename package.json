@@ -1,7 +1,7 @@
 {
   "name": "discordjs-japan",
   "version": "1.0.0",
-  "description": "Discord.js Japan User Group homepage",
+  "description": "Discord.js Japan User Group",
   "author": "discordjs-japan",
   "private": true,
   "scripts": {
@@ -15,8 +15,8 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
-    "bootstrap-vue": "^2.0.0-rc.11",
-    "bootstrap": "^4.1.3"
+    "vuetify": "^1.5.5",
+    "vuetify-loader": "^1.2.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.9",
@@ -31,6 +31,8 @@
     "eslint-plugin-promise": ">=4.0.1",
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-loader": "^2.1.2",
-    "eslint-plugin-vue": "^5.2.2"
+    "eslint-plugin-vue": "^5.2.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
   }
 }

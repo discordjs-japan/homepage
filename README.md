@@ -1,6 +1,6 @@
 # discordjs-japan
 
-> Discord.js Japan User Group homepage
+> Discord.js Japan User Group
 
 ## Build Setup
 
