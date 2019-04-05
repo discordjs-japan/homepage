@@ -1,8 +1,16 @@
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 import pkg from './package'
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/homepage/'
+  }
+} : {}
+
 export default {
   mode: 'spa',
+
+  ...routerBase,
 
   /*
   ** Headers of the page
