@@ -1,6 +1,8 @@
 import { Configuration } from '@nuxt/types'
 
 const config: Configuration = {
+  mode: 'spa',
+
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
