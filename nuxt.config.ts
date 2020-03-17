@@ -5,12 +5,12 @@ const config: Configuration = {
 
   buildModules: [
     '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify',
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    '@nuxtjs/vuetify'
   ],
 
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
+    titleTemplate: '%s - Discord.js 日本ユーザーグループ',
     title: 'Discord.js Japan User Group | Discord.js 日本ユーザーグループ',
     meta: [
       { charset: 'utf-8' },
