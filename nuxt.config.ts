@@ -1,5 +1,11 @@
 import { Configuration } from '@nuxt/types'
 
+const routerConfig: Configuration = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/homepage/'
+  }
+} : {}
+
 const config: Configuration = {
   buildModules: [
     '@nuxtjs/eslint-module',
@@ -20,7 +26,9 @@ const config: Configuration = {
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' }
     ]
-  }
+  },
+
+  ...routerConfig
 }
 
 export default config
