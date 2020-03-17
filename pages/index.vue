@@ -1,5 +1,5 @@
 <template>
-  <div id="main">
-    <h1>discordjs-japan homepage</h1>
+  <div id="index">
+    <h1>Discord.js Japan</h1>
   </div>
 </template>

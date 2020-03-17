@@ -1,33 +1,24 @@
 <template>
-  <v-app dark>
-    <v-toolbar>
-      <v-toolbar-title>Discord.js Japan User Group</v-toolbar-title>
-      <v-spacer />
-      <v-toolbar-items>
-        <v-btn href="https://github.com/discordjs-japan">
-          GitHub
-        </v-btn>
-        <v-btn href="https://discord.gg/4tpD3TY">
-          Discord
-        </v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
+  <v-app>
     <v-content>
       <nuxt />
     </v-content>
-    <v-footer height="auto">
-      <v-spacer />
-      <h1>MIT License | Copyright &copy; 2019 - {{ new Date().getFullYear() }} {{ author }}</h1>
-    </v-footer>
+    <Footer />
+    <Fab />
   </v-app>
 </template>
 
-<script>
-export default {
-  data: function () {
-    return {
-      author: require('../package').author
-    }
+<script lang="ts">
+import { Vue, Component } from 'nuxt-property-decorator'
+
+const Footer = () => import('@/components/layout/home/Footer.vue')
+const Fab = () => import('@/components/layout/home/Fab.vue')
+
+@Component({
+  components: {
+    Footer,
+    Fab
   }
-}
+})
+export default class extends Vue {}
 </script>

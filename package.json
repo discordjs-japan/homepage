@@ -1,39 +1,27 @@
 {
-  "name": "discordjs-japan",
+  "name": "homepage",
   "version": "1.0.0",
-  "description": "Discord.js Japan User Group",
-  "author": "discordjs-japan",
+  "description": "Discord.js Japan homepage",
+  "author": "Discord.js Japan",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore ."
   },
   "dependencies": {
-    "cross-env": "^5.2.0",
-    "nuxt": "^2.4.0",
-    "vuetify": "^1.5.5",
-    "vuetify-loader": "^1.2.1"
+    "@nuxt/typescript-runtime": "^0.4.0",
+    "nuxt": "^2.0.0",
+    "nuxt-property-decorator": "^2.5.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",
-    "@nuxtjs/eslint-config": "^0.0.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.15.1",
-    "eslint-config-standard": ">=12.0.0",
-    "eslint-plugin-import": ">=2.16.0",
-    "eslint-plugin-jest": ">=22.3.0",
-    "eslint-plugin-node": ">=8.0.1",
-    "eslint-plugin-nuxt": ">=0.4.2",
-    "eslint-plugin-promise": ">=4.0.1",
-    "eslint-plugin-standard": ">=4.0.0",
-    "eslint-loader": "^2.1.2",
-    "eslint-plugin-vue": "^5.2.2",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2"
+    "@nuxt/typescript-build": "^0.6.0",
+    "@nuxtjs/eslint-config-typescript": "^1.0.2",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/vuetify": "^1.0.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2"
   }
 }
