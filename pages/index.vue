@@ -1,6 +1,15 @@
 <template>
   <div id="index">
-    <Parallax />
+    <v-parallax src="images/parallax.png">
+      <v-container>
+        <h1 class="display-2">
+          Discord.js Japan User Group
+        </h1>
+        <h2 class="headline grey--text text--lighten-4">
+          Discord.js日本ユーザーグループ
+        </h2>
+      </v-container>
+    </v-parallax>
 
     <v-container>
       <v-row>
@@ -14,10 +23,9 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-import { LazyCardInfo } from '~/components/LazyCard.vue'
+import { LazyCardInfo } from '~/components/ui/LazyCard.vue'
 
-const Parallax = () => import('@/components/home/Parallax.vue')
-const LazyCard = () => import('@/components/LazyCard.vue')
+const LazyCard = () => import('@/components/ui/LazyCard.vue')
 
 const lazyCards: LazyCardInfo[] = [
   {
@@ -61,8 +69,7 @@ const lazyCards: LazyCardInfo[] = [
 
 @Component({
   components: {
-    LazyCard,
-    Parallax
+    LazyCard
   }
 })
 export default class extends Vue {
