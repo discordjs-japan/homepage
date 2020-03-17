@@ -27,8 +27,6 @@ jobs:
         node-version: 'v12.x'
     - run: yarn --frozen-lockfile
     - run: yarn run generate
-      env:
-        DEPLOY_ENV: 'GH_PAGES'
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
