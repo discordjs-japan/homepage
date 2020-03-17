@@ -1084,7 +1084,7 @@
     eslint-plugin-unicorn "^16.0.0"
     eslint-plugin-vue "^6.1.2"
 
-"@nuxtjs/eslint-module@^1.0.0":
+"@nuxtjs/eslint-module@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-module/-/eslint-module-1.1.0.tgz#816f8d41c3883e8131ce5f863a0ca2f3fd7cbcbf"
   integrity sha512-9np9tKQ30ULIfT7Zshhw9Gc8Xf437/X7jUGG2Wv4SwT26Miu0WE0q9FNXUt9gxaBIQuokKiWsoTT28rXUaxHjQ==
@@ -1092,7 +1092,7 @@
     consola "^2.10.1"
     eslint-loader "^3.0.0"
 
-"@nuxtjs/vuetify@^1.0.0":
+"@nuxtjs/vuetify@^1.11.0":
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/vuetify/-/vuetify-1.11.0.tgz#de8bc9e737479e6c167c2ff45122811362fee7b1"
   integrity sha512-5yHaQ8sc9rrae6fAhJeqBbfbZWvhvD+rL3ROUQnTpvognvN2qTvDseM1fezyfQSYh28JRu4qGlTe2Lbgsq3msw==
@@ -3421,7 +3421,7 @@ eslint-plugin-node@^11.0.0:
     resolve "^1.10.1"
     semver "^6.1.0"
 
-eslint-plugin-nuxt@>=0.4.2:
+eslint-plugin-nuxt@>=0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-nuxt/-/eslint-plugin-nuxt-0.5.1.tgz#8d39bd727d2142a6fab04661b9c95e48856fa81c"
   integrity sha512-LkjznzUcJBzLiiYjcTTPtpN8yPmrGCsfr5CqFadViTJPpEr8TXum7K3cZ5MIiqokxTemG69joZGimG/tQGdIbg==
@@ -3514,7 +3514,7 @@ eslint-visitor-keys@^1.1.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.1.0.tgz#e2a82cea84ff246ad6fb57f9bde5b46621459ec2"
   integrity sha512-8y9YjtM1JBJU/A9Kc+SbaOV4y29sSWckBwMHa+FGtVj5gN/sbnKDf6xJUl+8g7FAij9LVaP8C24DUiH/f/2Z9A==
 
-eslint@^6.1.0:
+eslint@^6.8.0:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.8.0.tgz#62262d6729739f9275723824302fb227c8c93ffb"
   integrity sha512-K+Iayyo2LtyYhDSYwz5D5QdWw0hCacNzyq1Y821Xna2xSJj7cijoLLYmLxTQgcgZ9mC61nryMy9S7GRbYpI5Ig==
@@ -5538,7 +5538,7 @@ nuxt-property-decorator@^2.5.1:
     vuex "^3.1.1"
     vuex-class "^0.3.2"
 
-nuxt@^2.0.0:
+nuxt@^2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.11.0.tgz#654664fe1a95af2014fd55c38ba2c732bfa5edc5"
   integrity sha512-Y7lastjYWIOppja0FaWozPfkvlmJ8uZSqWx0VbK7l5djbHls5jgUGag0iu6GsNNwCFTKpoAtptNHiWOsyMxStA==
