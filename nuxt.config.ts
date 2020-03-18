@@ -14,7 +14,6 @@ const config: Configuration = {
   ],
 
   head: {
-    titleTemplate: '%s - Discord.js 日本ユーザーグループ',
     title: 'Discord.js Japan User Group | Discord.js 日本ユーザーグループ',
     meta: [
       { charset: 'utf-8' },
