@@ -1,7 +1,7 @@
 <template>
   <div id="index">
     <v-parallax
-      src="images/parallax.png"
+      src="images/parallax.jpg"
       alt="コーディングの写真"
     >
       <v-container>
