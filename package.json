@@ -17,6 +17,7 @@
     "nuxt-property-decorator": "^2.5.1"
   },
   "devDependencies": {
+    "@mdi/js": "^5.0.45",
     "@nuxt/typescript-build": "^0.6.0",
     "@nuxtjs/eslint-config-typescript": "^1.0.2",
     "@nuxtjs/eslint-module": "^1.1.0",

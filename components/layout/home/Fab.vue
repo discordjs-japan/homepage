@@ -8,12 +8,13 @@
     :color="getBtnColor"
     @click="toggleTheme"
   >
-    <v-icon>mdi-brightness-{{ getIcon }}</v-icon>
+    <v-icon>{{ getBrightnessIcon }}</v-icon>
   </v-btn>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
+import { mdiBrightness4, mdiBrightness7 } from '@mdi/js'
 
 const ITEM_KEY = 'homepage_dark_theme'
 
@@ -31,8 +32,8 @@ export default class extends Vue {
     return localStorage.getItem(ITEM_KEY) === 'true'
   }
 
-  public get getIcon (): string {
-    return this.$vuetify.theme.dark ? '4' : '7'
+  public get getBrightnessIcon (): string {
+    return this.$vuetify.theme.dark ? mdiBrightness4 : mdiBrightness7
   }
 
   public get getBtnColor (): string {
