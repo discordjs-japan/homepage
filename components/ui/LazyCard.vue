@@ -14,7 +14,7 @@
         <h4 v-text="cardInfo.description" />
       </v-card-text>
 
-      <v-divider class="mt-3 mb-3" />
+      <v-divider class="mt-1 mb-1" />
 
       <v-card-actions v-for="(action, index) in cardInfo.actions" :key="index">
         <v-btn :href="action.href" :color="action.color" :nuxt="action.nuxtLink" v-text="action.buttonText" />

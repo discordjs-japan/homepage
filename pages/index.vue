@@ -15,9 +15,9 @@
     </v-parallax>
 
     <v-container>
-      <v-row>
+      <v-row no-gutters>
         <v-col v-for="(card, index) in cards" :key="index" cols="12" md="4">
-          <LazyCard :card-info="card" max-width="500" height="300" />
+          <LazyCard :card-info="card" max-width="500" class="pa-1" />
         </v-col>
       </v-row>
     </v-container>
