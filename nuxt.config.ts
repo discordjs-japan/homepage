@@ -3,6 +3,10 @@ import { Configuration } from '@nuxt/types'
 const config: Configuration = {
   mode: 'spa',
 
+  modules: [
+    'nuxt-webfontloader'
+  ],
+
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxt/typescript-build',
@@ -18,8 +22,7 @@ const config: Configuration = {
       { hid: 'description', name: 'description', content: 'Discord.jsを使う日本ユーザーの為の活動をしています。' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
