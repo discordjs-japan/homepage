@@ -1,6 +1,9 @@
 <template>
   <div id="index">
-    <v-parallax src="images/parallax.png">
+    <v-parallax
+      src="images/parallax.png"
+      alt="コーディングの写真"
+    >
       <v-container>
         <h1 class="display-2">
           Discord.js Japan User Group

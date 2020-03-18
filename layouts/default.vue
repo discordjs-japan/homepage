@@ -21,6 +21,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
+import { MetaInfo } from 'vue-meta'
 
 const Fab = () => import('@/components/layout/home/Fab.vue')
 
@@ -29,5 +30,13 @@ const Fab = () => import('@/components/layout/home/Fab.vue')
     Fab
   }
 })
-export default class extends Vue {}
+export default class extends Vue {
+  public head (): MetaInfo {
+    return {
+      link: [
+        { rel: 'canonical', href: `https://discordjs-japan.org${this.$route.path}` }
+      ]
+    }
+  }
+}
 </script>
