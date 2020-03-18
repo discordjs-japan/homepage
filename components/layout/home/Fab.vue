@@ -5,6 +5,7 @@
     right
     large
     fixed
+    aria-label="テーマ切り替え"
     :color="getBtnColor"
     @click="toggleTheme"
   >
