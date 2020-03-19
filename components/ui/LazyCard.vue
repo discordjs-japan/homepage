@@ -11,7 +11,7 @@
       </v-card-title>
 
       <v-card-text>
-        <h4 v-text="cardInfo.description" />
+        <p v-text="cardInfo.description" />
       </v-card-text>
 
       <v-divider class="mt-1 mb-1" />

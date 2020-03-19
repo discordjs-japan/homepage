@@ -8,9 +8,9 @@
         <h1 class="display-2">
           Discord.js Japan User Group
         </h1>
-        <h2 class="headline grey--text text--lighten-4">
+        <p class="headline grey--text text--lighten-4">
           Discord.js日本ユーザーグループ
-        </h2>
+        </p>
       </v-container>
     </v-parallax>
 
