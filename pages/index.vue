@@ -14,6 +14,22 @@
       </v-container>
     </v-parallax>
 
+    <section id="about-discordjs-japan">
+      <v-container class="text-center mt-12">
+        <h2 class="display-1">
+          Discord.js日本ユーザーグループ とは？
+        </h2>
+
+        <v-divider class="mb-5 mt-3" />
+
+        <v-responsive max-width="650" class="mx-auto title font-weight-light">
+          <p>
+            Discord.jsを使う日本ユーザーの人たちに向けて作られた非公式コミュニティです。公式ドキュメントやガイドの翻訳、Discord.jsに関する情報をScrapboxにまとめるなどの活動を主にしています。Discord.jsについて何か質問や困っていることがあれば、ぜひこのコミュニティを活用してください！あなたのいい手助けになると思います。
+          </p>
+        </v-responsive>
+      </v-container>
+    </section>
+
     <v-container>
       <v-row no-gutters>
         <v-col v-for="(card, index) in cards" :key="index" cols="12" md="4">
