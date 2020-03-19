@@ -4,7 +4,7 @@
       <nuxt />
     </v-content>
 
-    <v-footer padless>
+    <v-footer padless class="mt-5">
       <v-card flat width="100%">
         <v-divider />
         <v-card-text>
