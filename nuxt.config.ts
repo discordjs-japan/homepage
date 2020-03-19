@@ -20,7 +20,6 @@ const config: Configuration = {
     },
     meta: [
       { charset: 'utf-8' },
-      { hid: 'description', name: 'description', content: 'このサイトはDiscord.jsを使う日本ユーザーの為の活動をしている非公式コミュニティのホームページです。' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'format-detection', content: 'telephone=no,email=no,address=no' },
       { name: 'author', content: 'Discord.js Japan User Group' },
