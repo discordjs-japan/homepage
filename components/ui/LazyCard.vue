@@ -1,5 +1,5 @@
 <template>
-  <v-lazy transition="fade-transition" :options="{ threshold: .5 }">
+  <v-lazy>
     <v-card
       :max-width="maxWidth"
       :max-height="maxHeight"
