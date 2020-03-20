@@ -5,19 +5,21 @@
         <v-col v-for="(category, index) in categorys" :key="index" cols="3">
           <strong class="d-block mb-5" v-text="category.title" />
 
-          <li v-for="(item, i) in category.items" :key="i" class="mb-3">
-            <nuxt-link
-              v-if="item.nuxtLink"
-              :to="item.url"
-              v-text="item.text"
-            />
+          <ul>
+            <li v-for="(item, i) in category.items" :key="i" class="mb-3">
+              <nuxt-link
+                v-if="item.nuxtLink"
+                :to="item.url"
+                v-text="item.text"
+              />
 
-            <a
-              v-else
-              :href="item.url"
-              v-text="item.text"
-            />
-          </li>
+              <a
+                v-else
+                :href="item.url"
+                v-text="item.text"
+              />
+            </li>
+          </ul>
         </v-col>
       </v-row>
 
