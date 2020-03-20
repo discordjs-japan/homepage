@@ -2,7 +2,7 @@
   <v-footer class="mt-5">
     <v-container class="px-0">
       <v-row>
-        <v-col v-for="(category, index) in categorys" :key="index" cols="3">
+        <v-col v-for="(category, index) in categorys" :key="index">
           <strong class="d-block mb-5" v-text="category.title" />
 
           <ul>
