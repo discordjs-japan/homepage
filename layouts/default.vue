@@ -4,16 +4,7 @@
       <nuxt />
     </v-content>
 
-    <v-footer padless class="mt-5">
-      <v-card flat width="100%">
-        <v-divider />
-        <v-card-text>
-          <p class="subtitle-2 mb-0">
-            Copyright &copy; {{ new Date().getFullYear() }} Discord.js Japan All rights reserved.
-          </p>
-        </v-card-text>
-      </v-card>
-    </v-footer>
+    <Footer />
 
     <Fab />
   </v-app>
@@ -24,10 +15,12 @@ import { Vue, Component } from 'nuxt-property-decorator'
 import { MetaInfo } from 'vue-meta'
 
 const Fab = () => import('@/components/layout/home/Fab.vue')
+const Footer = () => import('@/components/layout/home/Footer.vue')
 
 @Component({
   components: {
-    Fab
+    Fab,
+    Footer
   }
 })
 export default class extends Vue {
