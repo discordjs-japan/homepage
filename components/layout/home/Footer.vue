@@ -88,8 +88,8 @@ export default class extends Vue {
           url: 'https://github.com/discordjs-japan'
         },
         {
-          text: 'ガイド翻訳 (GitHub)',
-          url: 'https://github.com/discordjs-japan/guide'
+          text: 'ガイド翻訳 (Crowdin)',
+          url: 'https://crwd.in/discordjs-guide'
         },
         {
           text: 'ドキュメント翻訳 (Crowdin)',
