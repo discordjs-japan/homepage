@@ -20,7 +20,7 @@
   "devDependencies": {
     "@mdi/js": "^5.4.55",
     "@nuxt/typescript-build": "^1.0.3",
-    "@nuxtjs/eslint-config-typescript": "^1.0.2",
+    "@nuxtjs/eslint-config-typescript": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/vuetify": "^1.11.0",
     "eslint": "^6.8.0",
