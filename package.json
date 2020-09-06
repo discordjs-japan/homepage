@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.4.10",
+    "@nuxt/typescript-runtime": "^1.0.0",
     "nuxt": "^2.14.1",
     "nuxt-property-decorator": "^2.7.2",
     "nuxt-webfontloader": "^1.1.0"
