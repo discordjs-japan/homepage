@@ -18,7 +18,7 @@
     "nuxt-webfontloader": "^1.1.0"
   },
   "devDependencies": {
-    "@mdi/js": "^5.5.55",
+    "@mdi/js": "^5.7.55",
     "@nuxt/types": "^2.14.4",
     "@nuxt/typescript-build": "^2.0.2",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
