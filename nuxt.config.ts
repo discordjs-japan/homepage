@@ -36,7 +36,7 @@ const config: Configuration = {
       { hid: 'Content-Type', httpEquiv: 'Content-Type', content: 'utf-8' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', href: '/favicon.png' }
     ],
     noscript: [
       {
