@@ -5,6 +5,7 @@
       :max-height="maxHeight"
       :width="width"
       :height="height"
+      class="d-flex flex-column justify-space-between"
     >
       <v-card-title>
         <h3 v-text="cardInfo.title" />
@@ -14,19 +15,21 @@
         <p v-text="cardInfo.description" />
       </v-card-text>
 
-      <v-divider class="mt-1 mb-1" />
+      <div>
+        <v-divider class="mt-1 mb-1" />
 
-      <v-card-actions
-        v-for="(action, index) in cardInfo.actions"
-        :key="index"
-      >
-        <v-btn
-          :href="action.href"
-          :color="action.color"
-          :nuxt="action.nuxtLink"
-          v-text="action.buttonText"
-        />
-      </v-card-actions>
+        <v-card-actions
+          v-for="(action, index) in cardInfo.actions"
+          :key="index"
+        >
+          <v-btn
+            :href="action.href"
+            :color="action.color"
+            :nuxt="action.nuxtLink"
+            v-text="action.buttonText"
+          />
+        </v-card-actions>
+      </div>
     </v-card>
   </v-lazy>
 </template>
