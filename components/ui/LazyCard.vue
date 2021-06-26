@@ -1,5 +1,5 @@
 <template>
-  <v-lazy>
+  <v-lazy :height="height">
     <v-card
       :max-width="maxWidth"
       :max-height="maxHeight"
@@ -16,8 +16,16 @@
 
       <v-divider class="mt-1 mb-1" />
 
-      <v-card-actions v-for="(action, index) in cardInfo.actions" :key="index">
-        <v-btn :href="action.href" :color="action.color" :nuxt="action.nuxtLink" v-text="action.buttonText" />
+      <v-card-actions
+        v-for="(action, index) in cardInfo.actions"
+        :key="index"
+      >
+        <v-btn
+          :href="action.href"
+          :color="action.color"
+          :nuxt="action.nuxtLink"
+          v-text="action.buttonText"
+        />
       </v-card-actions>
     </v-card>
   </v-lazy>
@@ -27,33 +35,33 @@
 import { Vue, Component, Prop } from 'nuxt-property-decorator'
 
 export interface LazyCardActions {
-  buttonText: string,
-  href: string,
-  color?: string,
-  nuxtLink?: boolean
+  buttonText: string;
+  href: string;
+  color?: string;
+  nuxtLink?: boolean;
 }
 
 export interface LazyCardInfo {
-  title: string,
-  description: string,
-  actions?: LazyCardActions[]
+  title: string;
+  description: string;
+  actions?: LazyCardActions[];
 }
 
 @Component
 export default class extends Vue {
   @Prop({ required: true })
-  public readonly cardInfo!: LazyCardInfo
+  public readonly cardInfo!: LazyCardInfo;
 
   @Prop()
-  public readonly maxWidth?: number
+  public readonly maxWidth?: number;
 
   @Prop()
-  public readonly maxHeight?: number
+  public readonly maxHeight?: number;
 
   @Prop()
-  public readonly width?: number
+  public readonly width?: number;
 
   @Prop()
-  public readonly height?: number
+  public readonly height?: number | string = '100%';
 }
 </script>
