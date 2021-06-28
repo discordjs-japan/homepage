@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="mt-5">
+  <v-footer class="mt-12">
     <v-container class="px-0">
       <v-row>
         <v-col v-for="(category, index) in categorys" :key="index">
