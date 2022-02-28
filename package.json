@@ -24,7 +24,7 @@
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/vuetify": "^1.11.2",
-    "eslint": "^7.8.1",
+    "eslint": "^8.10.0",
     "eslint-plugin-nuxt": ">=1.0.0",
     "ts-loader": "^8.0.3"
   }
