@@ -1,31 +1,50 @@
 {
-  "name": "homepage",
-  "version": "1.0.0",
-  "description": "Discord.js Japan homepage",
-  "author": "Discord.js Japan",
+  "name": "@discordjs-japan/homepage",
   "private": true,
+  "description": "discordjs-japan.orgのソースコード",
+  "license": "MIT",
+  "sideEffects": false,
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
-    "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore ."
+    "postinstall": "remix setup cloudflare",
+    "start": "cross-env NODE_ENV=production npm run dev:wrangler",
+    "format": "prettier --write . && eslint ./app --fix",
+    "format:check": "prettier --check . && eslint ./app",
+    "generate:css": "tailwindcss -m -i ./styles/app.css -o ./app/styles/tailwind.css",
+    "build": "run-p build:*",
+    "build:remix": "remix build",
+    "build:css": "npm run generate:css -- --minify",
+    "dev": "run-p build:* && run-p dev:*",
+    "dev:remix": "remix watch",
+    "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public",
+    "dev:css": "npm run generate:css -- --watch"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^1.0.0",
-    "nuxt": "^2.14.4",
-    "nuxt-property-decorator": "^2.7.2",
-    "nuxt-webfontloader": "^1.1.0"
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "@remix-run/cloudflare-pages": "^1.3.4",
+    "@remix-run/react": "^1.3.4",
+    "clsx": "^1.1.1",
+    "cross-env": "^7.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.3.4"
   },
   "devDependencies": {
-    "@mdi/js": "^5.5.55",
-    "@nuxt/types": "^2.14.4",
-    "@nuxt/typescript-build": "^2.0.2",
-    "@nuxtjs/eslint-config-typescript": "^3.0.0",
-    "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/vuetify": "^1.11.2",
-    "eslint": "^7.8.1",
-    "eslint-plugin-nuxt": ">=1.0.0",
-    "ts-loader": "^8.0.3"
+    "@cloudflare/workers-types": "^3.4.0",
+    "@remix-run/dev": "^1.3.4",
+    "@remix-run/eslint-config": "^1.3.4",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.12",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "tailwindcss": "^3.0.23",
+    "wrangler": "beta"
+  },
+  "volta": {
+    "node": "16.14.2"
   }
 }

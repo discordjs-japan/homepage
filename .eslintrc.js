@@ -1,5 +1,3 @@
 module.exports = {
-  extends: [
-    '@nuxtjs/eslint-config-typescript'
-  ]
+  extends: ['@remix-run/eslint-config', 'prettier'],
 }
