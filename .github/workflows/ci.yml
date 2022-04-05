@@ -18,4 +18,6 @@ jobs:
           node-version: 16.x
           cache: 'npm'
       - run: npm ci
+        env:
+          CI: 'true'
       - run: npm run format:check
