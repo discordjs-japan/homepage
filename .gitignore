@@ -2,6 +2,7 @@
 
 /.cache/
 /functions/\[\[path\]\].js
+/functions/\[\[path\]\].js.map
 /public/build/
 /app/styles/tailwind.css
 .env
