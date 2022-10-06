@@ -20,7 +20,7 @@
     "dev:css": "npm run generate:css -- --watch"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@remix-run/cloudflare-pages": "^1.5.1",
