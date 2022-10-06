@@ -32,7 +32,7 @@
     "remix": "^1.5.1"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^3.11.0",
+    "@cloudflare/workers-types": "^3.16.0",
     "@remix-run/dev": "^1.5.1",
     "@remix-run/eslint-config": "^1.7.2",
     "autoprefixer": "^10.4.7",
