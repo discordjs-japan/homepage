@@ -45,7 +45,7 @@
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.11",
     "tailwindcss": "^3.1.8",
-    "wrangler": "^2.1.10"
+    "wrangler": "^2.8.1"
   },
   "volta": {
     "node": "16.14.2"
