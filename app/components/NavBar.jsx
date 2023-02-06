@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'remix'
+import { Link } from '@remix-run/react'
 
 export const NavBar = () => {
   return (

@@ -16,5 +16,5 @@
     "noEmit": true,
     "resolveJsonModule": true
   },
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["remix.env.d.ts", "**/*.js", "**/*.jsx"]
 }

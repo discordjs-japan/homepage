@@ -9,8 +9,9 @@ export const Hero = () => {
           Discord.js Japan User Group
         </h1>
         <p className="mt-12 text-lg font-semibold leading-relaxed tracking-wide">
-          世界で最も人気なDiscord
-          APIライブラリであるDiscord.jsを扱う日本のユーザーのためのコミュニティ
+          Discord APIライブラリの一つである「
+          <bold className="font-semibold text-black">Discord.js</bold>
+          」の非公式日本語コミュニティ
         </p>
         <p className="mt-6 text-lg font-semibold leading-relaxed tracking-wide">
           Discord.jsの情報をScrapboxにまとめていたり、ドキュメントやガイドの翻訳などあなたのボット開発を支えるための活動を多くのメンバーたちと共に行っている組織でもあります。

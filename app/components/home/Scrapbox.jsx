@@ -13,8 +13,7 @@ export const Scrapbox = () => {
           GroupではScrapboxを活用してDiscord.jsに関する様々な情報をまとめています。
         </p>
         <p className="mt-6 text-lg font-semibold">
-          Discordサーバーに参加して<code className="mx-1">InkoHX#7777</code>
-          に参加するとメンションしてくれれば誰でもページを更新、作成することができます！
+          Scrapboxには誰でも参加することができ、自由にページを作成または編集することができます。
         </p>
         <div className="mt-6 flex">
           <Button

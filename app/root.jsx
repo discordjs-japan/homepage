@@ -7,7 +7,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from 'remix'
+} from '@remix-run/react'
 
 export function meta() {
   return {
