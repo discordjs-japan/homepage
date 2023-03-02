@@ -1,5 +1,5 @@
 import { Button } from '../Button'
-import { DiscordLike } from '../DiscordLike'
+import * as Discord from '../Discord'
 import { Window } from '../Window'
 
 export const Community = () => {
@@ -25,19 +25,19 @@ export const Community = () => {
         <Window className="shadow-xl shadow-black">
           <ol className="flex w-full flex-col space-y-4 bg-slate-700 p-4">
             <li>
-              <DiscordLike.Message discriminator="1" username="名無し1号">
+              <Discord.Message discriminator="1" username="名無し1号">
                 サーバーにテキストチャンネルを作成したいのですがどうしたらいいですか？
-              </DiscordLike.Message>
+              </Discord.Message>
             </li>
             <li>
-              <DiscordLike.Message discriminator="2" username="名無し2号">
+              <Discord.Message discriminator="2" username="名無し2号">
                 特定のリアクションに応じて特定のプログラムを実行させたいですのですが、どうすればいいでしょうか？
-              </DiscordLike.Message>
+              </Discord.Message>
             </li>
             <li>
-              <DiscordLike.Message discriminator="3" username="名無し3号">
+              <Discord.Message discriminator="3" username="名無し3号">
                 WebhookをDiscord.jsで操作したい
-              </DiscordLike.Message>
+              </Discord.Message>
             </li>
           </ol>
         </Window>

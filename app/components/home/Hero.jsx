@@ -1,5 +1,5 @@
 import { Window } from '../Window'
-import { DiscordLike } from '../DiscordLike'
+import * as Discord from '../Discord'
 
 export const Hero = () => {
   return (
@@ -21,15 +21,15 @@ export const Hero = () => {
         <Window className="shadow-xl shadow-black">
           <ol className="flex w-full flex-col space-y-4 bg-slate-700 p-4">
             <li>
-              <DiscordLike.Message discriminator="1" username="名無し1号">
+              <Discord.Message discriminator="1" username="名無し1号">
                 <strong className="text-white">
                   Discord.jsを扱う日本のユーザーのためのコミュニティ
                 </strong>
                 を名乗っていますが、実は公式と関わりがほとんどありません (´·ω·`)
-              </DiscordLike.Message>
+              </Discord.Message>
             </li>
             <li>
-              <DiscordLike.Message discriminator="2" username="名無し2号">
+              <Discord.Message discriminator="2" username="名無し2号">
                 公式サイト:{' '}
                 <a
                   href="https://discord.js.org"
@@ -53,12 +53,12 @@ export const Hero = () => {
                 >
                   https://discord.gg/djs
                 </a>
-              </DiscordLike.Message>
+              </Discord.Message>
             </li>
             <li>
-              <DiscordLike.Message discriminator="3" username="名無し3号">
+              <Discord.Message discriminator="3" username="名無し3号">
                 ⬆️もよろしくね～
-              </DiscordLike.Message>
+              </Discord.Message>
             </li>
           </ol>
         </Window>

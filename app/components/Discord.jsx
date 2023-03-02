@@ -1,4 +1,4 @@
-const Message = ({ children, username, discriminator }) => {
+export const Message = ({ children, username, discriminator }) => {
   return (
     <div className="flex space-x-4">
       <img
@@ -12,8 +12,4 @@ const Message = ({ children, username, discriminator }) => {
       </div>
     </div>
   )
-}
-
-export const DiscordLike = {
-  Message,
 }
