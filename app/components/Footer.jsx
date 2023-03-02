@@ -2,7 +2,9 @@ export const Footer = () => {
   return (
     <footer className="bg-slate-50">
       <div className="container py-4">
-        <small className="text-sm">© 2022 Discord.js Japan User Group</small>
+        <small className="text-sm">
+          Copyright © 2022 Discord.js Japan User Group
+        </small>
       </div>
     </footer>
   )
