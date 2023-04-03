@@ -1,0 +1,62 @@
+---
+import Window from '../Window.astro'
+
+const channels = [
+  [
+    'インフォメーション',
+    ['ようこそ', 'お知らせ', 'scrapbox更新情報', 'ニュース'],
+  ],
+  ['質問', ['質問']],
+  ['雑談', ['情報共有', '技術話題', '雑談', 'ボット']],
+] as const
+
+type Props = {
+  channel: (typeof channels)[number][1][number]
+}
+
+const props = Astro.props
+---
+
+<Window>
+  <div class="flex bg-slate-800">
+    <div class="hidden w-2/6 overflow-y-scroll md:block">
+      <div
+        class="text-md sticky top-0 truncate bg-slate-800 p-4 font-bold after:content-['Discord.js_Japan_User_Group']"
+      >
+      </div>
+      <div class="space-y-4 px-4 pb-4">
+        {
+          channels.map(([categoryName, children]) => (
+            <div class="text-sm font-semibold text-slate-400">
+              <div
+                data-text={categoryName}
+                class="cursor-pointer truncate text-xs after:content-[attr(data-text)] hover:text-white"
+              >
+                {/** https://github.com/withastro/prettier-plugin-astro/issues/325 */}
+              </div>
+              {children.map((channel) => (
+                <div
+                  data-text={channel}
+                  class:list={[
+                    'py-0.5 px-2 rounded cursor-pointer truncate after:content-[attr(data-text)]',
+                    props.channel === channel
+                      ? 'bg-slate-700 text-white'
+                      : 'hover:bg-slate-700 hover:text-white',
+                  ]}
+                />
+              ))}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="flex-1 max-lg:max-w-full">
+      <div
+        data-text={props.channel}
+        class="sticky top-0 bg-slate-800 px-4 py-2 font-bold before:content-[attr(data-text)] lg:p-2"
+      >
+      </div>
+      <slot />
+    </div>
+  </div>
+</Window>

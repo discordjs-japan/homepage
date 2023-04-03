@@ -1,5 +1,3 @@
-/node_modules/
-/.cache/
-/functions/\[\[path\]\].js
-/public/build/
-/app/styles/tailwind.css
+/pnpm-lock.yaml
+/dist/
+/public/

@@ -1,0 +1,17 @@
+---
+import AppFooter from '../components/AppFooter.astro'
+import AppHeader from '../components/AppHeader.astro'
+import BaseLayout from './BaseLayout.astro'
+
+type BaseLayoutProps = Parameters<typeof BaseLayout>[0]
+
+interface Props extends BaseLayoutProps {}
+---
+
+<BaseLayout {...Astro.props}>
+  <AppHeader />
+  <main class="min-h-screen">
+    <slot />
+  </main>
+  <AppFooter />
+</BaseLayout>

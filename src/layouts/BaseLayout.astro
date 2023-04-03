@@ -1,0 +1,28 @@
+---
+export interface Props {
+  pageTitle: string
+  description: string
+}
+
+const { pageTitle, description } = Astro.props
+const canonicalLink = Astro.site?.href
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    {canonicalLink && <link rel="canonical" href={canonicalLink} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta property="og:site_name" content="Discord.js Japan User Group" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <title>Discord.js Japan User Group | {pageTitle}</title>
+  </head>
+  <body class="antialiased">
+    <slot />
+  </body>
+</html>

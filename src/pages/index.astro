@@ -1,0 +1,95 @@
+---
+import DiscordUI from '../components/discord/DiscordUI.astro'
+import Container from '../components/ui/Container.astro'
+import Window from '../components/Window.astro'
+import MainLayout from '../layouts/MainLayout.astro'
+
+const questions = [
+  '送信元メッセージIDの取得方法',
+  'AuditLogEventの使用に関する質問',
+  'Interactionを受け取る方法',
+  'BaseInteraction.isCommand(), BaseInteraction.isChatInputCommand()の違いについて',
+]
+---
+
+<MainLayout pageTitle="Home" description="Discord.js日本ユーザーグループ">
+  <section class="py-36">
+    <Container class="px-4">
+      <h1 class="text-center text-7xl font-bold text-rose-500">
+        Discord.js Japan User Group
+      </h1>
+      <p class="mt-8 text-center text-xl font-semibold">
+        discord.jsを扱う者たちの非公式日本語コミュニティ
+      </p>
+    </Container>
+  </section>
+  <section class="py-24">
+    <Container class="px-4">
+      <div class="grid grid-cols-1 gap-x-4 gap-y-8 lg:grid-cols-2">
+        <div class="self-center">
+          <h2 class="text-3xl font-extrabold text-blue-600">Discord</h2>
+          <div class="my-6 space-y-4">
+            <p class="text-lg font-semibold text-slate-600">
+              Discordサーバーではdiscord.jsに関する質問を受け付けたり、コミュニティメンバー同士で雑談やコミュニティをより良くしていくための議論等を行っています。
+            </p>
+            <p class="text-lg font-semibold text-slate-600">
+              その他にもScrapboxの更新情報を受け取れる便利なチャンネルもご用意しておりますので、参加してみてはいかがです？
+            </p>
+          </div>
+          <a
+            class="block max-w-max rounded-lg bg-blue-600 px-4 py-2 font-bold text-white hover:opacity-80"
+            href="https://discord.gg/4tpD3TY">サーバーに参加</a
+          >
+        </div>
+        <DiscordUI channel="質問">
+          <div class="space-y-4 p-4">
+            {
+              questions.map((question) => (
+                <div
+                  data-text={question}
+                  class="text-md cursor-pointer rounded-lg bg-slate-700 p-4 font-bold text-slate-300 transition-all after:content-[attr(data-text)] hover:-translate-y-1 hover:shadow-xl max-lg:truncate"
+                />
+              ))
+            }
+          </div>
+        </DiscordUI>
+      </div>
+    </Container>
+  </section>
+  <section class="py-24">
+    <Container class="grid grid-cols-1 gap-x-4 gap-y-8 px-4 lg:grid-cols-2">
+      <div class="self-center">
+        <h2 class="text-3xl font-extrabold text-green-500">Scrapbox</h2>
+        <div class="my-6 space-y-4 font-semibold text-slate-600">
+          <p>
+            Discord.js Japan User
+            Groupではdiscord.jsに関する様々な情報をScrapboxを使ってまとめています。
+          </p>
+          <p>
+            discord.jsに関するほとんどの情報はここで得ることができるようになっており、きっとあなたの役に立つでしょう。
+          </p>
+          <p>
+            そして私達のScrapboxには自由に参加することができ、ページの編集・作成ができます。
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a
+            href="https://scrapbox.io/discordjs-japan"
+            class="block cursor-pointer rounded-lg bg-green-500 px-4 py-2 font-bold text-white hover:opacity-80"
+            >見てみる</a
+          >
+          <a
+            href="https://scrapbox.io/discordjs-japan/このプロジェクトに参加するには"
+            class="block cursor-pointer rounded-lg bg-green-500 px-4 py-2 font-bold text-white hover:opacity-80"
+            >参加する</a
+          >
+        </div>
+      </div>
+      <div>
+        <Window>
+          <img src="/assets/scrapbox.png" alt="" />
+        </Window>
+      </div>
+    </Container>
+  </section>
+</MainLayout>

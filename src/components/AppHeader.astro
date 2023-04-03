@@ -1,0 +1,84 @@
+---
+import BarIcon from './icon/BarIcon.astro'
+import XIcon from './icon/XIcon.astro'
+
+const headerHeigth = '50px'
+const links = [
+  ['Discord', 'https://discord.gg/4tpD3TY'],
+  ['Scrapbox', 'https://scrapbox.io/discordjs-japan'],
+] as const
+---
+
+<header class="sticky top-0 z-20 border-b bg-white">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
+    <a
+      href="/"
+      class="cursor-pointer text-xl font-semibold uppercase text-red-500 hover:opacity-80"
+    >
+      d.js Japan
+    </a>
+    <button id="mobile-menu-button" class="md:hidden">
+      <BarIcon class="h-7 w-7 hover:opacity-80" />
+      <XIcon class="hidden h-7 w-7 hover:opacity-80" />
+    </button>
+    <nav class="hidden items-center space-x-4 md:flex">
+      {
+        links.map(([name, link]) => (
+          <a
+            class="font-semibold text-slate-600 hover:text-slate-800"
+            href={link}
+          >
+            {name}
+          </a>
+        ))
+      }
+    </nav>
+    <div
+      id="mobile-nav"
+      class="fixed bottom-0 left-0 z-10 hidden h-screen w-screen overflow-y-auto bg-white px-4 py-2"
+    >
+      <nav>
+        <div class="grid grid-cols-1 gap-y-2">
+          {
+            [['ホーム', '/'], ...links].map(([name, link]) => (
+              <a
+                class="rounded-md py-2 text-center font-semibold hover:bg-slate-100"
+                href={link}
+              >
+                {name}
+              </a>
+            ))
+          }
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style define:vars={{ headerHeigth }}>
+  header {
+    height: var(--headerHeigth);
+  }
+
+  div#mobile-nav {
+    top: var(--headerHeigth);
+  }
+</style>
+
+<script>
+  const menu = document.querySelector<HTMLDivElement>('div#mobile-nav')!
+  const menuButton = document.querySelector<HTMLButtonElement>(
+    'button#mobile-menu-button'
+  )!
+  const barIcon = menuButton.querySelector<HTMLElement>(':nth-child(1)')! // BarIcon
+  const xIcon = menuButton.querySelector<HTMLElement>(':nth-child(2)')! // XIcon
+
+  menuButton.addEventListener('click', () => {
+    document.body.style.overflow = menu.classList.contains('hidden')
+      ? 'hidden'
+      : 'scroll'
+    ;[menu, barIcon, xIcon].forEach((element) =>
+      element.classList.toggle('hidden')
+    )
+  })
+</script>

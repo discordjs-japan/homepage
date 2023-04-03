@@ -1,0 +1,69 @@
+---
+import DiscordIcon from './icon/DiscordIcon.astro'
+import GitHubIcon from './icon/GitHubIcon.astro'
+import ScrapboxIcon from './icon/ScrapboxIcon.astro'
+import Container from './ui/Container.astro'
+
+const links = [
+  [
+    'リンク',
+    [
+      ['Discord', 'https://discord.gg/4tpD3TY'],
+      ['Scrapbox', 'https://scrapbox.io/discordjs-japan'],
+      ['GitHub', 'https://github.com/discordjs-japan'],
+    ],
+  ],
+  [
+    'ポリシー',
+    [
+      ['ルール', '/rules'],
+      ['質問者向けガイドライン', '/guidelines/questioner'],
+      ['回答者向けガイドライン', '/guidelines/respondent'],
+    ],
+  ],
+] as const
+---
+
+<footer class="border-t">
+  <Container class="px-4 py-2">
+    <div class="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
+      {
+        links.map(([heading, children]) => (
+          <nav>
+            <h3 class="font-semibold text-black">{heading}</h3>
+            <div class="mt-2 text-slate-700">
+              {children.map(([text, link]) => (
+                <a class="mt-1 block hover:text-black" href={link}>
+                  {text}
+                </a>
+              ))}
+            </div>
+          </nav>
+        ))
+      }
+    </div>
+    <div class="mt-4 flex flex-col items-center justify-between sm:flex-row">
+      <small class="text-sm font-light text-slate-700"
+        >Copyright © {new Date().getUTCFullYear()} Discord.js Japan User Group</small
+      >
+      <nav class="mt-2 flex items-center space-x-2 sm:mt-0">
+        <a href="https://discord.gg/4tpD3TY">
+          <DiscordIcon
+            class="h-6 w-6 fill-gray-500 transition-colors hover:fill-black hover:opacity-80"
+          />
+          <span class="sr-only">Discord</span>
+        </a>
+        <a href="https://scrapbox.io/discordjs-japan">
+          <ScrapboxIcon class="h-6 w-6 transition-all hover:brightness-75" />
+          <span class="sr-only">Scrapbox</span>
+        </a>
+        <a href="https://github.com/discordjs-japan">
+          <GitHubIcon
+            class="h-6 w-6 fill-gray-500 transition-colors hover:fill-black hover:opacity-80"
+          />
+          <span class="sr-only">GitHub</span>
+        </a>
+      </nav>
+    </div>
+  </Container>
+</footer>

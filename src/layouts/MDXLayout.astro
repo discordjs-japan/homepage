@@ -1,0 +1,38 @@
+---
+import Container from '../components/ui/Container.astro'
+import MainLayout from './MainLayout.astro'
+
+interface Props {
+  frontmatter: {
+    title: string
+    description: string
+  }
+}
+
+const { frontmatter } = Astro.props
+---
+
+<MainLayout pageTitle={frontmatter.title} description={frontmatter.description}>
+  <div class="relative">
+    <div class="hero-bg"></div>
+    <div class="py-32">
+      <Container class="space-y-4 px-4">
+        <h1 class="text-5xl font-extrabold">{frontmatter.title}</h1>
+        <p class="text-2xl text-slate-600">{frontmatter.description}</p>
+      </Container>
+    </div>
+  </div>
+  <Container class="px-4 py-8">
+    <article class="prose mx-auto max-w-4xl prose-code:px-1">
+      <slot />
+    </article>
+  </Container>
+</MainLayout>
+
+<style>
+  .hero-bg {
+    clip-path: polygon(0px 0px, 100% 0px, 100% 80%, 0% 100%);
+
+    @apply absolute -z-10 h-full w-full bg-gradient-to-t from-slate-100 to-white;
+  }
+</style>

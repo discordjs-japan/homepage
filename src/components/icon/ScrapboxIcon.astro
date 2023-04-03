@@ -1,0 +1,17 @@
+---
+interface Props {
+  class?: string
+}
+---
+
+<img
+  src="https://nota.github.io/press-kit/S-icon.svg"
+  class={Astro.props.class}
+  alt="Scrapbox"
+/>
+
+<style>
+  img {
+    @apply brightness-125 grayscale;
+  }
+</style>

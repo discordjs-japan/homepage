@@ -1,0 +1,23 @@
+---
+interface Props {
+  readonly discriminator: 0 | 1 | 2 | 3 | 4 | 5
+  readonly username: string
+  readonly class: string
+}
+
+const { discriminator, username } = Astro.props
+---
+
+<div class:list={['flex space-x-4 max-w-full', Astro.props.class]}>
+  <img
+    class="block h-10 w-10 rounded-full"
+    src={`https://cdn.discordapp.com/embed/avatars/${discriminator}.png`}
+    alt="ユーザーアイコン"
+  />
+  <div class="flex-1">
+    <div class="font-semibold tracking-wide text-white">{username}</div>
+    <div class="mt-4">
+      <slot />
+    </div>
+  </div>
+</div>
