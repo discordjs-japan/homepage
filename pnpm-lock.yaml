@@ -1,9 +1,6 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  '@astrojs/cloudflare':
-    specifier: ^6.2.2
-    version: 6.2.2(astro@2.1.9)
   '@astrojs/mdx':
     specifier: ^0.18.2
     version: 0.18.2(astro@2.1.9)(rollup@3.20.2)
@@ -39,16 +36,6 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
-    dev: false
-
-  /@astrojs/cloudflare@6.2.2(astro@2.1.9):
-    resolution: {integrity: sha512-Z/twtIM68TwazHGLax05WcADsR6oDVFiq21TMTfEsWOmhoVzTTPwxiU8kw8gukGrwug8JwLiiAeK7qFDZNmFcw==}
-    peerDependencies:
-      astro: ^2.1.4
-    dependencies:
-      astro: 2.1.9
-      esbuild: 0.17.15
-      tiny-glob: 0.2.9
     dev: false
 
   /@astrojs/compiler@0.31.4:
