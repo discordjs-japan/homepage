@@ -68,7 +68,7 @@ const links = [
 <script>
   const menu = document.querySelector<HTMLDivElement>('div#mobile-nav')!
   const menuButton = document.querySelector<HTMLButtonElement>(
-    'button#mobile-menu-button'
+    'button#mobile-menu-button',
   )!
   const barIcon = menuButton.querySelector<HTMLElement>(':nth-child(1)')! // BarIcon
   const xIcon = menuButton.querySelector<HTMLElement>(':nth-child(2)')! // XIcon
@@ -78,7 +78,7 @@ const links = [
       ? 'hidden'
       : 'scroll'
     ;[menu, barIcon, xIcon].forEach((element) =>
-      element.classList.toggle('hidden')
+      element.classList.toggle('hidden'),
     )
   })
 </script>
