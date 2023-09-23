@@ -34,6 +34,8 @@ jobs:
 
       - run: pnpm format:check
 
+      - run: pnpm astro:check
+
   deploy:
     needs: [test]
     runs-on: ubuntu-latest
