@@ -35,8 +35,8 @@ devDependencies:
     specifier: ^0.12.0
     version: 0.12.0
   prettier-plugin-tailwindcss:
-    specifier: ^0.5.4
-    version: 0.5.4(prettier-plugin-astro@0.12.0)(prettier@3.0.3)
+    specifier: ^0.5.9
+    version: 0.5.9(prettier-plugin-astro@0.12.0)(prettier@3.0.3)
 
 packages:
 
@@ -3405,14 +3405,13 @@ packages:
       prettier: 3.0.3
       sass-formatter: 0.7.8
 
-  /prettier-plugin-tailwindcss@0.5.4(prettier-plugin-astro@0.12.0)(prettier@3.0.3):
-    resolution: {integrity: sha512-QZzzB1bID6qPsKHTeA9qPo1APmmxfFrA5DD3LQ+vbTmAnY40eJI7t9Q1ocqel2EKMWNPLJqdTDWZj1hKYgqSgg==}
+  /prettier-plugin-tailwindcss@0.5.9(prettier-plugin-astro@0.12.0)(prettier@3.0.3):
+    resolution: {integrity: sha512-9x3t1s2Cjbut2QiP+O0mDqV3gLXTe2CgRlQDgucopVkUdw26sQi53p/q4qvGxMLBDfk/dcTV57Aa/zYwz9l8Ew==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
       '@prettier/plugin-pug': '*'
       '@shopify/prettier-plugin-liquid': '*'
-      '@shufo/prettier-plugin-blade': '*'
       '@trivago/prettier-plugin-sort-imports': '*'
       prettier: ^3.0
       prettier-plugin-astro: '*'
@@ -3431,8 +3430,6 @@ packages:
       '@prettier/plugin-pug':
         optional: true
       '@shopify/prettier-plugin-liquid':
-        optional: true
-      '@shufo/prettier-plugin-blade':
         optional: true
       '@trivago/prettier-plugin-sort-imports':
         optional: true
