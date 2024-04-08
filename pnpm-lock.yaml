@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.4.1
     version: 0.4.1(prettier-plugin-astro@0.12.3)(prettier@3.1.1)(typescript@5.3.3)
   '@astrojs/mdx':
-    specifier: ^2.0.3
-    version: 2.0.3(astro@4.1.1)
+    specifier: ^2.2.4
+    version: 2.2.4(astro@4.1.1)
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.1.1)(tailwindcss@3.4.1)
@@ -138,13 +138,38 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx@2.0.3(astro@4.1.1):
-    resolution: {integrity: sha512-wFjQX5CihU5B4UAQNwc2R48ph0flpc6/yvDCFANE0agtgI2+BaVcAjuW0EhGOQCZ65dQDqnFKE0lvGs7EADYpg==}
+  /@astrojs/markdown-remark@5.0.0:
+    resolution: {integrity: sha512-QBXbxXZamVRoqCNN2gjDXa7qYPUkJZq7KYFfg3DX7rze3QL6xiz4N+Wg202dNPRaIkQa16BV6D8+EHibQFubRg==}
+    dependencies:
+      '@astrojs/prism': 3.0.0
+      github-slugger: 2.0.0
+      hast-util-from-html: 2.0.1
+      hast-util-to-text: 4.0.1
+      import-meta-resolve: 4.0.0
+      mdast-util-definitions: 6.0.0
+      rehype-raw: 7.0.0
+      rehype-stringify: 10.0.0
+      remark-gfm: 4.0.0
+      remark-parse: 11.0.0
+      remark-rehype: 11.0.0
+      remark-smartypants: 2.0.0
+      shiki: 1.2.4
+      unified: 11.0.4
+      unist-util-remove-position: 5.0.0
+      unist-util-visit: 5.0.0
+      unist-util-visit-parents: 6.0.1
+      vfile: 6.0.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@astrojs/mdx@2.2.4(astro@4.1.1):
+    resolution: {integrity: sha512-eXCmftMsWj4vTECrc4vgdaXrA8xIvrmJ9rM37BZNK5anQ2PunUm9N8wbnK2VVTE0CAmW5U8v9y3IGps2RYGUvQ==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       astro: ^4.0.0
     dependencies:
-      '@astrojs/markdown-remark': 4.0.1
+      '@astrojs/markdown-remark': 5.0.0
       '@mdx-js/mdx': 3.0.0
       acorn: 8.11.3
       astro: 4.1.1(typescript@5.3.3)
@@ -892,7 +917,7 @@ packages:
   /@mdx-js/mdx@3.0.0:
     resolution: {integrity: sha512-Icm0TBKBLYqroYbNW3BPnzMGn+7mwpQOK310aZ7+fkCtiU3aqv2cdcX+nd0Ydo3wI5Rx8bX2Z2QmGb/XcAClCw==}
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       '@types/estree-jsx': 1.0.0
       '@types/hast': 3.0.3
       '@types/mdx': 2.0.7
@@ -1051,6 +1076,10 @@ packages:
     dev: false
     optional: true
 
+  /@shikijs/core@1.2.4:
+    resolution: {integrity: sha512-ClaUWpt8oTzjcF0MM1P81AeWyzc1sNSJlAjMG80CbwqbFqXSNz+NpQVUC0icobt3sZn43Sn27M4pHD/Jmp3zHw==}
+    dev: false
+
   /@tailwindcss/typography@0.5.10(tailwindcss@3.4.1):
     resolution: {integrity: sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==}
     peerDependencies:
@@ -1066,7 +1095,7 @@ packages:
   /@types/acorn@4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
     dev: false
 
   /@types/babel__core@7.20.5:
@@ -1107,11 +1136,7 @@ packages:
   /@types/estree-jsx@1.0.0:
     resolution: {integrity: sha512-3qvGd0z8F2ENTGr/GG1yViqfiKmRfrXVx5sJyHGFu3z7m5g5utCQtGp/g29JnjflhtQJBv1WDQukHiT58xPcYQ==}
     dependencies:
-      '@types/estree': 1.0.1
-    dev: false
-
-  /@types/estree@1.0.1:
-    resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
+      '@types/estree': 1.0.5
     dev: false
 
   /@types/estree@1.0.5:
@@ -1882,7 +1907,7 @@ packages:
   /estree-util-attach-comments@3.0.0:
     resolution: {integrity: sha512-cKUwm/HUcTDsYh/9FgnuFqpfquUbwIqwKM26BVCGDPVgvaCl/nDCCjUfiLlx6lsEZ3Z4RFxNbOQ60pkaEwFxGw==}
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
     dev: false
 
   /estree-util-build-jsx@3.0.1:
@@ -1916,7 +1941,7 @@ packages:
   /estree-walker@3.0.3:
     resolution: {integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==}
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
     dev: false
 
   /eventemitter3@5.0.1:
@@ -2152,6 +2177,12 @@ packages:
       web-namespaces: 2.0.1
     dev: false
 
+  /hast-util-is-element@3.0.0:
+    resolution: {integrity: sha512-Val9mnv2IWpLbNPqc/pUem+a7Ipj2aHacCwgNfTiK0vJKl0LF+4Ba4+v1oPHFpf3bLYmreq0/l3Gud9S5OH42g==}
+    dependencies:
+      '@types/hast': 3.0.3
+    dev: false
+
   /hast-util-parse-selector@4.0.0:
     resolution: {integrity: sha512-wkQCkSYoOGCRKERFWcxMVMOcYE2K1AaNLU8DXS9arxnLOUEWbOXKXiJUNzEpqZ3JOKpnha3jkFrumEjVliDe7A==}
     dependencies:
@@ -2179,7 +2210,7 @@ packages:
   /hast-util-to-estree@3.1.0:
     resolution: {integrity: sha512-lfX5g6hqVh9kjS/B9E2gSkvHH4SZNiQFiqWS0x9fENzEl+8W12RqdRxX6d/Cwxi30tPQs3bIO+aolQJNp1bIyw==}
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       '@types/estree-jsx': 1.0.0
       '@types/hast': 3.0.3
       comma-separated-tokens: 2.0.3
@@ -2219,7 +2250,7 @@ packages:
   /hast-util-to-jsx-runtime@2.3.0:
     resolution: {integrity: sha512-H/y0+IWPdsLLS738P8tDnrQ8Z+dj12zQQ6WC11TIM21C8WFVoIxcqWXf2H3hiTVZjF1AWqoimGwrTWecWrnmRQ==}
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       '@types/hast': 3.0.3
       '@types/unist': 3.0.0
       comma-separated-tokens: 2.0.3
@@ -2248,6 +2279,15 @@ packages:
       space-separated-tokens: 2.0.2
       web-namespaces: 2.0.1
       zwitch: 2.0.4
+    dev: false
+
+  /hast-util-to-text@4.0.1:
+    resolution: {integrity: sha512-RHL7Vo2n06ZocCFWqmbyhZ1pCYX/mSKdywt9YD5U6Hquu5syV+dImCXFKLFt02JoK5QxkQFS0PoVdFdPXuPffQ==}
+    dependencies:
+      '@types/hast': 3.0.3
+      '@types/unist': 3.0.0
+      hast-util-is-element: 3.0.0
+      unist-util-find-after: 5.0.0
     dev: false
 
   /hast-util-whitespace@3.0.0:
@@ -2405,7 +2445,7 @@ packages:
   /is-reference@3.0.2:
     resolution: {integrity: sha512-v3rht/LgVcsdZa3O2Nqs+NMowLOxeOm7Ay9+/ARQ2F+qEoANRcqrjAZKGN0v8ymUetZGgkp26LTnGT7H0Qo9Pg==}
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
     dev: false
 
   /is-stream@3.0.0:
@@ -2896,7 +2936,7 @@ packages:
   /micromark-extension-mdx-expression@3.0.0:
     resolution: {integrity: sha512-sI0nwhUDz97xyzqJAbHQhp5TfaxEvZZZ2JDqUo+7NvyIYG6BZ5CPPqj2ogUoPJlmXHBnyZUzISg9+oUmU6tUjQ==}
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       devlop: 1.1.0
       micromark-factory-mdx-expression: 2.0.1
       micromark-factory-space: 2.0.0
@@ -2910,7 +2950,7 @@ packages:
     resolution: {integrity: sha512-uvhhss8OGuzR4/N17L1JwvmJIpPhAd8oByMawEKx6NVdBCbesjH4t+vjEp3ZXft9DwvlKSD07fCeI44/N0Vf2w==}
     dependencies:
       '@types/acorn': 4.0.6
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       devlop: 1.1.0
       estree-util-is-identifier-name: 3.0.0
       micromark-factory-mdx-expression: 2.0.1
@@ -2930,7 +2970,7 @@ packages:
   /micromark-extension-mdxjs-esm@3.0.0:
     resolution: {integrity: sha512-DJFl4ZqkErRpq/dAPyeWp15tGrcrrJho1hKK5uBS70BCtfrIFg81sqcTVu3Ta+KD1Tk5vAtBNElWxtAa+m8K9A==}
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.0
       micromark-util-character: 2.0.1
@@ -2974,7 +3014,7 @@ packages:
   /micromark-factory-mdx-expression@2.0.1:
     resolution: {integrity: sha512-F0ccWIUHRLRrYp5TC9ZYXmZo+p2AM13ggbsW4T0b5CRKP8KHVRB8t4pwtBgTxtjRmwrK0Irwm7vs2JOZabHZfg==}
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       devlop: 1.1.0
       micromark-util-character: 2.0.1
       micromark-util-events-to-acorn: 2.0.2
@@ -3060,7 +3100,7 @@ packages:
     resolution: {integrity: sha512-Fk+xmBrOv9QZnEDguL9OI9/NQQp6Hz4FuQ4YmCb/5V7+9eAh1s6AYSvL20kHkD67YIg7EpE54TiSlcsf3vyZgA==}
     dependencies:
       '@types/acorn': 4.0.6
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       '@types/unist': 3.0.0
       devlop: 1.1.0
       estree-util-visit: 2.0.0
@@ -3400,7 +3440,7 @@ packages:
   /periscopic@3.1.0:
     resolution: {integrity: sha512-vKiQ8RRtkl9P+r/+oefh25C3fhybptkHKCZSPlcXiJux2tJF55GnEj3BVn4A5gKfq9NWWXXrxkHBwVPUfH0opw==}
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       estree-walker: 3.0.3
       is-reference: 3.0.2
     dev: false
@@ -3928,6 +3968,12 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /shiki@1.2.4:
+    resolution: {integrity: sha512-Q9n9jKiOjJCRPztA9POn3/uZXNySHDNKAsPNpmtHDcFyi6ZQhx5vQKZW3Nhrwn8TWW3RudSRk66zqY603EZDeg==}
+    dependencies:
+      '@shikijs/core': 1.2.4
+    dev: false
+
   /shikiji@0.6.13:
     resolution: {integrity: sha512-4T7X39csvhT0p7GDnq9vysWddf2b6BeioiN3Ymhnt3xcy9tXmDcnsEFVxX18Z4YcQgEE/w48dLJ4pPPUcG9KkA==}
     dependencies:
@@ -4243,6 +4289,13 @@ packages:
       is-plain-obj: 4.1.0
       trough: 2.1.0
       vfile: 6.0.1
+    dev: false
+
+  /unist-util-find-after@5.0.0:
+    resolution: {integrity: sha512-amQa0Ep2m6hE2g72AugUItjbuM8X8cGQnFoHk0pGfrFeT9GZhzN5SW8nRsiGKK7Aif4CrACPENkA6P/Lw6fHGQ==}
+    dependencies:
+      '@types/unist': 3.0.0
+      unist-util-is: 6.0.0
     dev: false
 
   /unist-util-is@5.2.1:
