@@ -4,7 +4,7 @@ import Window from '../Window.astro'
 const channels = [
   [
     'インフォメーション',
-    ['ようこそ', 'お知らせ', 'scrapbox更新情報', 'ニュース'],
+    ['ようこそ', 'お知らせ', 'cosense更新情報', 'ニュース'],
   ],
   ['質問', ['質問']],
   ['雑談', ['情報共有', '技術話題', '雑談', 'ボット']],
@@ -38,7 +38,7 @@ const props = Astro.props
                 <div
                   data-text={channel}
                   class:list={[
-                    'py-0.5 px-2 rounded cursor-pointer truncate after:content-[attr(data-text)]',
+                    'cursor-pointer truncate rounded px-2 py-0.5 after:content-[attr(data-text)]',
                     props.channel === channel
                       ? 'bg-slate-700 text-white'
                       : 'hover:bg-slate-700 hover:text-white',
