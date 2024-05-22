@@ -10,7 +10,7 @@ interface Props extends BaseLayoutProps {}
 
 <BaseLayout {...Astro.props}>
   <AppHeader />
-  <main class="min-h-screen">
+  <main class="min-h-screen" transition:animate="fade">
     <slot />
   </main>
   <AppFooter />
