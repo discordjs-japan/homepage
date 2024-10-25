@@ -53,7 +53,7 @@ JavaScriptに関して更に詳しい情報を得るには[MDN](https://develope
 ## 質問を投稿する際
 
 - 分からない箇所を明確にすること
-- [使用しているパッケージのバージョンを記載してください](#使用しているパッケージのバージョンを記載してください)
+- [使用しているパッケージのバージョンを記載してください](https://cosen.se/discordjs-japan/インストールされたDiscord.jsのバージョンを確認する方法)
 - [コードやエラー文を送信する場合にはコードブロックを利用しましょう](#コードやエラー文を送信する場合にはコードブロックを利用しましょう)
 - あなたが使用しているパッケージを把握し、適切なタグを選択してスレッドを投稿してください
   - `discord.js`のv14を使用している場合は`discord.js@14`を選択する
@@ -62,58 +62,6 @@ JavaScriptに関して更に詳しい情報を得るには[MDN](https://develope
 - 調べた情報、参考にした情報があれば書いてください
 - 一つのスレッドに関連性が全くない質問を２つ以上しないこと
   - 迷わずスレッドを2つに分けてください
-
-### 使用しているパッケージのバージョンを記載してください
-
-バージョンによっては同じ処理でも書き方が大きく異なったり、挙動が違うことがあるためです。  
-確認手段は`package.json`を見る、パッケージマネージャーのコマンドを使うなど様々です。
-
-`package.json`だけを見てバージョンを確認する方法を紹介しておきます。  
-コピペでできるので、ぜひ使ってみてください。
-
-#### PowerShell
-
-Windows, macOS, LinuxでPowerShellを使っている方は以下のコマンドを実行してください。
-
-```powershell
-Get-Content ./package.json |
-  Select-String -Pattern '@discordjs/(brokers|builders|collection|core|formatters|proxy|rest|voice|util|ws)|discord\.js' |
-  ForEach-Object {
-    $line = ($_.Line -replace '[",:]', '').Trim()
-    $parts = $line -split '\s+'
-    "{0,-22} {1}" -f $parts[0], $parts[1]
-  }
-```
-
-実行すると、以下のような出力結果が出るはずなので、それをコピペしてください。
-
-```plaintext
-@discordjs/brokers     1.0.0
-@discordjs/builders    1.9.0
-@discordjs/collection  2.1.1
-@discordjs/core        2.0.0
-@discordjs/formatters  0.5.0
-@discordjs/proxy       2.1.1
-@discordjs/rest        2.4.0
-@discordjs/util        1.1.1
-@discordjs/voice       0.17.0
-@discordjs/ws          2.0.0
-discord.js             14.16.3
-```
-
-#### UNIX
-
-UNIX-likeなシェルを使っている方は以下のコマンドを実行してください。  
-ただし、`cat`と`grep`、`sed`、`awk`が使える環境であることを前提としています。
-
-```sh
-cat ./package.json \
-  | grep -E '@discordjs/(brokers|builders|collection|core|formatters|proxy|rest|voice|util|ws)|discord\.js' \
-  | sed 's/[",:]//g' \
-  | awk '{ printf "%-22s %s\n", $1, $2 }'
-```
-
-[PowerShellセクション](#powershell)と同じような出力結果が出るので、それをコピペしてください。
 
 ### コードやエラー文を送信する場合にはコードブロックを利用しましょう
 
