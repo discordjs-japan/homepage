@@ -6,19 +6,31 @@ layout: ../../layouts/MDXLayout.astro
 
 ## 前提
 
-回答者はあなたが**JavaScript の基礎**を得ていることを前提に回答します。
+回答者はあなたが**JavaScriptの基礎**を得ていることを前提に回答します。
 
-ここでの**基礎**とは、[JS Primer の「第一部: 基本文法」](https://jsprimer.net/basic/)に書かれていることを指します。  
-プログラミングや JavaScript を始めたばかりならば最低でもリンク先の内容を読破してから質問するようお願いいたします。
+ここでの**基礎**とは、[JS Primerの「第一部: 基本文法」](https://jsprimer.net/basic/)に書かれていることを指します。  
+プログラミングやJavaScriptを始めたばかりならば最低でもリンク先の内容を読破してから質問するようお願いいたします。
 
-JavaScript に関して更に詳しい情報を得るには[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript)を読むのがオススメです。
+JavaScriptに関して更に詳しい情報を得るには[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript)を読むのがオススメです。
 
 ## 質問をする前に確認すべきこと
 
-- **discord.js での実装に関する**ものか
+- 下記のパッケージでの実装に関するものか
+  - [discord.js](https://github.com/discordjs/discord.js/tree/main/packages/discord.js)
+  - [@discordjs/brokers](https://github.com/discordjs/discord.js/tree/main/packages/brokers)
+  - [@discordjs/builders](https://github.com/discordjs/discord.js/tree/main/packages/builders)
+  - [@discordjs/collection](https://github.com/discordjs/discord.js/tree/main/packages/collection)
+  - [@discordjs/core](https://github.com/discordjs/discord.js/tree/main/packages/core)
+  - [@discordjs/formatters](https://github.com/discordjs/discord.js/tree/main/packages/formatters)
+  - [@discordjs/proxy](https://github.com/discordjs/discord.js/tree/main/packages/proxy)
+  - [@discordjs/rest](https://github.com/discordjs/discord.js/tree/main/packages/rest)
+  - [@discordjs/voice](https://github.com/discordjs/discord.js/tree/main/packages/voice)
+  - [@discordjs/util](https://github.com/discordjs/discord.js/tree/main/packages/util)
+  - [@discordjs/ws](https://github.com/discordjs/discord.js/tree/main/packages/ws)
+  - [@discordjs/next](https://github.com/discordjs/discord.js/tree/main/packages/next)
 - 実現したいこと、知りたいことなど、前提を明確にしましょう
 - 本当に質問する必要があるか
-  - 既に Cosense に答えが載っているか、[やりたいこと逆引き集](https://cosen.se/discordjs-japan/やりたいこと逆引き集)に無いか確認してみましょう
+  - 既に[Cosense](https://cosen.se/discordjs-japan)に答えが載っているか、[やりたいこと逆引き集](https://cosen.se/discordjs-japan/やりたいこと逆引き集)に無いか確認してみましょう
   - フォーラムチャンネルで既に解決されている質問が無いか検索をしてみること
     - もしかしたら既にあなたの知りたいことが、過去で答えが出ているかもしれませんよ
 - エラーメッセージを確認してみよう
@@ -29,12 +41,12 @@ JavaScript に関して更に詳しい情報を得るには[MDN](https://develop
 ## してはいけない質問
 
 - やってほしいことを丸投げする質問
-  - 「これできないからこれやって」みたいな
+  - 「これできないからこれやって」など
 - コピペしたコードが動かない
 - コードを書いてもらうために回答者を利用する
-  - 回答者はあなたのロボットではない
-- メンバーに対して DM を使って直接質問をしてはなりません
-  - 質問への回答はそれなりに労力を要するので、1 人に集中させないために明確な理由、本人の許可無く DM を使って質問することはやめましょう
+  - 回答者はあなたのロボットではありません
+- メンバーに対してDMを使って直接質問をしてはなりません
+  - 質問への回答はそれなりに労力を要するので、1人に集中させないために明確な理由、本人の許可無くDMを使って質問することはやめましょう
 - このコードは実行できますか？
   - コードを読むのは人間です。万能コンピューターではないので、そのコードがどのような命令を実行するか理解するには時間がかかります
   - コードを動かした上で問題があるようなら、是非質問チャンネルを利用してください
@@ -42,13 +54,16 @@ JavaScript に関して更に詳しい情報を得るには[MDN](https://develop
 ## 質問を投稿する際
 
 - 分からない箇所を明確にすること
-- あなたが使用している discord.js のバージョンを把握し、バージョンごとに分けられた適切なタグを選択してください
-  - バージョンによっては同じ処理でも書き方が大きく異なったり、挙動が違うことがあるため
-  - 使用しているバージョンが分からない場合は、[インストールされた discord.js のバージョンを確認する方法](https://cosen.se/discordjs-japan/インストールされたDiscord.jsのバージョンを確認する方法)を見てください
+- [使用しているパッケージのバージョンを記載してください](https://cosen.se/discordjs-japan/インストールされたDiscord.jsのバージョンを確認する方法)
+- [コードやエラー文を送信する場合にはコードブロックを利用しましょう](#コードやエラー文を送信する場合にはコードブロックを利用しましょう)
+- あなたが使用しているパッケージを把握し、適切なタグを選択してスレッドを投稿してください
+  - `discord.js`のv14を使用している場合は`discord.js@14`を選択する
+  - `@discordjs/*`を使用している場合は`@djs/*`を選択する
+    - 例えば`@discordjs/rest`なら`@djs/rest`
 - 使用している[インテント](https://cosen.se/discordjs-japan/Intents)も記載してください
 - 調べた情報、参考にした情報があれば書いてください
 - 一つのスレッドに関連性が全くない質問を２つ以上しないこと
-  - 迷わずスレッドを 2 つに分けてください
+  - 迷わずスレッドを2つに分けてください
 
 ### コードやエラー文を送信する場合にはコードブロックを利用しましょう
 
@@ -57,7 +72,7 @@ JavaScript に関して更に詳しい情報を得るには[MDN](https://develop
 ただし、意味のない長いコードを載せても回答側の負担を増やすだけなので、問題が起きただろうと思う部分のコードを抜き出して載せるようお願いします。
 しかし、それで回答ができない場合全てのコードを書いてもらうことになります。
 
-Discord で以下のようにコードやエラー文をバッククォート３つで囲うことで、人間が見やすいフォーマットにしてくれます。
+Discordで以下のようにコードやエラー文をバッククォート3つで囲うことで、人間が見やすいフォーマットにしてくれます。
 
 ````
 ```js
@@ -73,11 +88,11 @@ client.login()
 #### 字数制限に引っ掛かった場合
 
 テキストファイルとして送信するのが良いでしょう。  
-あるいはソースコードを GitHub 等で公開してある場合、リンクを載せるのがよろしいでしょう。
+あるいはソースコードをGitHub等で公開してある場合、リンクを載せるのがよろしいでしょう。
 
 ## ガイドラインに関する質問、貢献
 
-それらは全て、当 Discord サーバーの[提案フォーラム](https://discord.com/invite/25FDrsU9RE)にて受け付けます。
+それらは全て、当Discordサーバーの[提案フォーラム](https://discord.com/invite/TN7Gcu8FWP)にて受け付けます。
 
 質問の場合は**質問**タグを付けて投稿してください。
 
